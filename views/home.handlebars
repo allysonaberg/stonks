@@ -1,2 +1,17 @@
-<h1>Example App: Home</h1>
-<p>{{ stuff }}</p>
+{{ output }}
+
+<div class="jumbotron">
+  <h1 class="display-4">{{ stock.companyName }} ( {{ stock.symbol }})</h1>
+  <p class="lead">
+  <strong>Latest Price: </strong>${{ stock.latestPrice }} <br/><br/>
+  </p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+
+
+
+{{#each stock}}
+	{{@key}} | {{this}}<br/>
+{{/each}}
